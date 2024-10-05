@@ -1,0 +1,35 @@
+{
+  "name": "my-router-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "start:dev": "vite --port=3001",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "@tanstack/router-plugin": "^1.58.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/reveal.js": "^5.0.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.4"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.58.18",
+    "@tanstack/router-devtools": "^1.58.18",
+    "highlight.js": "^11.10.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-reveal-slides": "github:bouzidanas/react-reveal-slides",
+    "react-revealjs": "^0.1.2",
+    "reveal.js": "^5.1.0",
+    "styles": "^0.2.1"
+  }
+}
