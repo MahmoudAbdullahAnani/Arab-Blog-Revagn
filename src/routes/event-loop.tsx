@@ -14,15 +14,22 @@ import Slide5 from "../Topics/Event-loop/components/Slides/slide-5";
 export const Route = createFileRoute("/event-loop")({
   component: EventLoopComponent,
 });
+export function isMobile() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
 
 function EventLoopComponent() {
   const [alirt, setAlirt] = React.useState(
-    <div className={`flex justify-between text-2xl px-5 py-2 bg-red-600 rounded-lg m-2 text-white`}>
-      <p>You can return to the main menu using ctrl+z</p>
-      <p style={{ direction: "rtl" }} className={``}>
-        يمكن الرجوع الي القائمة الرئيسية عن طريق ctrl+z
-      </p>
-    </div>
+    isMobile() && (
+      <div
+        className={`flex justify-between text-2xl px-5 py-2 bg-red-600 rounded-lg m-2 text-white`}
+      >
+        <p>You can return to the main menu using ctrl+z</p>
+        <p style={{ direction: "rtl" }} className={``}>
+          يمكن الرجوع الي القائمة الرئيسية عن طريق ctrl+z
+        </p>
+      </div>
+    )
   );
   React.useEffect(() => {
     setTimeout(() => {
