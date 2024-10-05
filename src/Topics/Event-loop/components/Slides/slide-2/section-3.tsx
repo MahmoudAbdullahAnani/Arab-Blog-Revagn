@@ -1,5 +1,5 @@
 import TopicName from "../../Headers/TopicName";
-// images
+// Images
 // @ts-ignore
 import WebAPIs from "./../../../assets/web-apis.png";
 export default function Section3() {
