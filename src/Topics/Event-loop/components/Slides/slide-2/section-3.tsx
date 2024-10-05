@@ -1,7 +1,7 @@
 import TopicName from "../../Headers/TopicName";
 // images
 // @ts-ignore
-import WebAPIs from "./../../../assets/Web-APIs.png";
+import WebAPIs from "./../../../assets/web-apis.png";
 export default function Section3() {
   return (
     <section className="">
