@@ -20,7 +20,7 @@ export function isMobile() {
 
 function EventLoopComponent() {
   const [alirt, setAlirt] = React.useState(
-    isMobile() && (
+    !isMobile() && (
       <div
         className={`flex justify-between text-2xl px-5 py-2 bg-red-600 rounded-lg m-2 text-white`}
       >
@@ -38,6 +38,12 @@ function EventLoopComponent() {
     let deck = new Reveal({
       backgroundTransition: "slide",
       transition: "slide",
+      // Ensure that the mobile view is horizontal
+      // width: window.innerWidth, // adjust width based on window size
+      // height: window.innerHeight, // adjust height based on window size
+      controls: true, // تأكد من أن هذه القيمة مضبوطة على true
+      controlsTutorial: true, // تعطيل التعليمات إذا كنت لا تريدها
+      
     });
     deck.initialize();
     console.log("initialized fool");
@@ -51,7 +57,7 @@ function EventLoopComponent() {
         style={{
           height: "100vh",
           width: "100%",
-          overflow: "hidden",
+          // overflow: "hidden",
           background: "#0005",
         }}
       >
